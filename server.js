@@ -91,7 +91,7 @@ app.get('/pagecount', function (req, res) {
   }
 });
 
-app.get('/proxy', function (req, res {
+app.get('/proxy', function (req, res) {
     res.send('Pending Proxy Function');
 });
 
