@@ -93,7 +93,7 @@ app.get('/pagecount', function (req, res) {
 });
 
 app.get('/proxy', function (req, res) {
-    res.send('Pending Proxy Function - from ' + util.inspect(req, {depth: null}));
+    res.send('Pending Proxy Function - from ' + util.inspect(req.query, {depth: null}));
 });
 
 // error handling
