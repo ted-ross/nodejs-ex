@@ -3,7 +3,8 @@ var express = require('express'),
     fs      = require('fs'),
     app     = express(),
     eps     = require('ejs'),
-    morgan  = require('morgan');
+    morgan  = require('morgan'),
+    util    = require('util');
     
 Object.assign=require('object-assign')
 
@@ -92,7 +93,7 @@ app.get('/pagecount', function (req, res) {
 });
 
 app.get('/proxy', function (req, res) {
-    res.send('Pending Proxy Function - from ' + req.toSource());
+    res.send('Pending Proxy Function - from ' + util.inspect(req, {depth: null}));
 });
 
 // error handling
